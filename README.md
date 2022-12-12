@@ -1,0 +1,1 @@
+This is a project to demonstrate competency in css grid concepts.
