@@ -1,4 +1,12 @@
+@import url("./assets/SecularOne-Regular.ttf");
+
+.hover:hover {
+    box-shadow: 5px 7px 10px crimson;
+    border-radius: 20px;
+}
+
 body {
+    font-family: 'SecularOne-Regular', sans-serif;
     margin: 0px;
 }
 
@@ -10,7 +18,7 @@ body {
 
 .sidebar {
     grid-area: 1 / 1 / -1 / 2;
-    background-color: #B91C1C;
+    background-color: #ff8282;
     color: white;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -19,6 +27,12 @@ body {
     align-items: center;
     column-gap: 10px;
     font-size: 13px;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin: 0px;
+    padding: 8px;
 }
 
 .sidebar #logo {
@@ -35,8 +49,8 @@ body {
     grid-area: 1 / 2 / 2 / -1;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    background-color: #FECACA;
+    grid-template-rows: 80px 80px;
+    background-color: aliceblue;
 }
 
 .user-icons {
@@ -47,6 +61,36 @@ body {
 .user-icons .icon {
     height: 35px;
     width: 35px;
+}
+
+#bigprofile {
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+}
+
+.header .hello-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#bigprofile {
+    position: relative;
+    left: 150px;
+}
+
+.hello-container h6 {
+    grid-row: 1 / 2;
+    grid-column: 2 / -1;
+    position: relative;
+    top: -20px;
+}
+
+.hello-container h1 {
+    grid-row: 2 / -1;
+    grid-column: 2 / -1;
+    position: relative;
+    top: -70px;
 }
 
 .header div {
@@ -66,6 +110,7 @@ body {
 
 .searchbar-container input {
     flex: 1;
+    border-radius: 20px;
 }
 
 .header .user-icons {
@@ -73,14 +118,21 @@ body {
     justify-content: center;
 }
 
-.header .hello-container {
-    display: flex;
-    justify-content: center;
-}
-
 .header .button-container {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+}
+
+.button-container button {
+    width: 100px;
+    height: 25px;
+    background-color: #ff8282;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    border-radius: 20px;
 }
 
 .content {
@@ -88,7 +140,7 @@ body {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
-    background-color: #F87171;
+    background-color: #cad3dd;
     padding: 10px;
 }
 
@@ -99,18 +151,99 @@ body {
 
 .projects-container {
     grid-area: 1 / 1 / -1 / 2;
+    padding: 15px;
+    margin: 0px;
+}
+
+.project-icons {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 9px;
+}
+
+.projects-container .heading-container {
+    margin: 0px;
+    color: black;
 }
 
 .announcements-container {
     grid-area: 1 / 2 / 2 / -1;
+    display: flex;
+    flex-direction: column;
+}
+
+.announcements-container h3 {
+    color: black;
+    margin: 4px;
+    padding: 5px;
+}
+
+.announcements{
+    border-radius: 10px;
+    background-color: aliceblue;
+    padding: 15px;
+}
+
+.announcements h4 {
+    margin: 0px;
+}
+
+.announcements p {
+    margin: 2px;
+}
+
+.announcements .divider {
+    height: 1px;
+    width: 100%;
+    background-color: black;
+}
+
+.announcements .announcement {
+    padding: 4px;
 }
 
 .trending-container {
     grid-area: 2 / 2 / -1 / -1;
 }
 
+.trending-container h3 {
+    color: black;
+    padding: 5px;
+    margin: 4px;
+}
+
 .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 1fr;
+    gap: 15px;
+}
+
+.projects div {
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+
+.trending {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 15px;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.usertag {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    position: relative;
+    top: .7rem;
+}
+
+.usertag h6 {
+    position: relative;
+    top: -20px;
 }
