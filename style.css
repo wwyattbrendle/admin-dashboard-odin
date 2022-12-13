@@ -1,48 +1,116 @@
+body {
+    margin: 0px;
+}
+
 .container {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 15vh 85vh;
 }
 
 .sidebar {
-    grid-column: 1 / 2;
-    grid-row: 1 / -1;
+    grid-area: 1 / 1 / -1 / 2;
+    background-color: #B91C1C;
+    color: white;
     display: grid;
-    grid-template-rows: repeat(3, auto-fit);
-    background-color: #fda4af;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-flow: row;
+    padding: 10px;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 13px;
+}
+
+.sidebar #logo {
+    height: 50px;
+    width: 50px;
+}
+
+.sidebar-icons {
+    height: 30px;
+    width: 30px;
 }
 
 .header {
-    grid-column: 2 / -1;
-    background-color: #fff1f2;
+    grid-area: 1 / 2 / 2 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #FECACA;
+}
+
+.user-icons {
+    display: flex;
+    align-items: center;
+}
+
+.user-icons .icon {
+    height: 35px;
+    width: 35px;
+}
+
+.header div {
+    padding: 8px;
+}
+
+.header .searchbar-container {
+    display: flex;
+    align-items: center;
+}
+
+.header .user-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.searchbar-container input {
+    flex: 1;
+}
+
+.header .user-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.header .hello-container {
+    display: flex;
+    justify-content: center;
+}
+
+.header .button-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content {
+    grid-area: 2 / 2 / -1 / -1;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #F87171;
+    padding: 10px;
+}
+
+.content-icons {
+    height: 20px;
+    width: 20px;
+}
+
+.projects-container {
+    grid-area: 1 / 1 / -1 / 2;
+}
+
+.announcements-container {
+    grid-area: 1 / 2 / 2 / -1;
+}
+
+.trending-container {
+    grid-area: 2 / 2 / -1 / -1;
 }
 
 .projects {
-    grid-row: 2 / -1;
-    background-color: #ffe4e6;
-}
-
-.projects .projects-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, minmax(1fr, auto-fit));
-    gap: 15px;
-}
-
-.announcements {
-    grid-row: 2 / 3;
-    background-color: #ffe4e6;
-}
-
-.announcements div {
-    background: #fff1f2;
-}
-
-.trending {
-    grid-row: 3 / 4;
-    background-color: #ffe4e6;
-}
-
-.trending div {
-    background-color: #fff1f2;
+    grid-auto-rows: 1fr;
 }
